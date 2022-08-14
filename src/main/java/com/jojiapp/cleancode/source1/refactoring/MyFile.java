@@ -34,7 +34,7 @@ public class MyFile implements Comparable<MyFile> {
 		if (!this.name.equals(myFile.name))
 			return this.name.compareTo(myFile.name);
 		if (!this.isContainExt.equals(myFile.isContainExt)) {
-			return this.isContainExt.compareTo(myFile.isContainExt);
+			return -this.isContainExt.compareTo(myFile.isContainExt);
 		}
 		return this.ext.compareTo(myFile.ext);
 	}
