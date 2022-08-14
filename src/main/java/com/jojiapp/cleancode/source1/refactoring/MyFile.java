@@ -5,7 +5,7 @@ import lombok.*;
 import java.util.*;
 
 public class MyFile implements Comparable<MyFile> {
-	private static final String DOC = "\\.";
+	private static final String DOT = "\\.";
 	private final String name;
 	private final String ext;
 	private final Boolean isContainExt;
@@ -26,7 +26,7 @@ public class MyFile implements Comparable<MyFile> {
 	}
 
 	private static String[] split(final String filename) {
-		return filename.split(DOC);
+		return filename.split(DOT);
 	}
 
 	@Override
