@@ -12,7 +12,7 @@ public class MyFiles {
 	private final List<MyFile> myFileList;
 
 	@Builder
-	private MyFiles(final List<String> filenameList, final List<String> extList) {
+	private MyFiles(final List<String> filenameList, final Set<String> extList) {
 		this.myFileList = filenameList.stream()
 				.map(filename -> MyFile.builder()
 						.filename(filename)

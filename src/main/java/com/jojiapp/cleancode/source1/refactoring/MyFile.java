@@ -11,7 +11,7 @@ public class MyFile implements Comparable<MyFile> {
 	private final Boolean isContainExt;
 
 	@Builder
-	private MyFile(final String filename, final List<String> extList) {
+	private MyFile(final String filename, final Set<String> extList) {
 		this.name = getName(filename);
 		this.ext = getExt(filename);
 		this.isContainExt = extList.contains(this.ext);

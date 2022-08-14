@@ -14,7 +14,7 @@ public class Main {
 
 		final MyFiles myFiles = MyFiles.builder()
 				.filenameList(readLines(bf, getFilenameLineCount(lineNumbers)))
-				.extList(readLines(bf, getExtLineCount(lineNumbers)))
+				.extList(new HashSet<>(readLines(bf, getExtLineCount(lineNumbers))))
 				.build();
 		System.out.println(myFiles);
 	}
@@ -38,7 +38,7 @@ public class Main {
 	}
 
 	private static List<String> readLines(BufferedReader bf, int lineNumber) {
-		return IntStream.of(lineNumber)
+		return IntStream.range(0, lineNumber)
 				.mapToObj(__ -> readLine(bf))
 				.toList();
 	}
